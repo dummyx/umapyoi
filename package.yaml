@@ -1,0 +1,40 @@
+name: umapyoi
+version: 0.1.0.0
+license: OtherLicense
+author: dummyx
+maintainer: 40601688+dummyx@users.noreply.github.com
+category: Web
+
+extra-source-files:
+  - README.md
+  - CHANGELOG.md
+
+ghc-options: -Wall
+
+dependencies:
+    - base
+    - aeson
+    - bytestring
+    - containers
+    - http-conduit
+    - text
+    - time
+    - unordered-containers
+    - vector
+
+library:
+  source-dirs: src
+
+executables:
+  umapyoi:
+    main: Main.hs
+    source-dirs: app
+    dependencies:
+      - umapyoi
+
+tests:
+  umapyoi-test:
+    main: Main.hs
+    source-dirs: test
+    dependencies:
+      - umapyoi
